@@ -1,8 +1,18 @@
 class CreateSections < ActiveRecord::Migration[7.0]
-  def change
-    create_table :sections do |t|
 
+  def up
+    create_table :sections do |t|
+      t.integer "page_id"
+      t.string "name", :limit => 50
+      t.integer "position"
+      t.boolean "visible", :default => false
+      t.string "content_type"
+      t.text "content"
       t.timestamps
     end
+  end
+
+  def down
+    drop_table :sections
   end
 end
