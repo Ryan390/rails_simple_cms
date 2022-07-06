@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head><meta charset="UTF-8"></head>
+<head>
+  <meta charset="UTF-8">
+  <% if !flash[:notice].blank? %>
+    <div class="notice">
+      <%= flash[:notice] %>
+    </div>
+  <% end %>
+</head>
 
 <body>
 <div>
   <h2>Subjects</h2>
-  <%= link_to("Add New Subject", '#', :class => 'action new') %>
+  <%= link_to("Add New Subject", new_subject_path, :class => 'action new') %>
 
   <table class="listing" summary="Subject List">
     <tr>
@@ -23,12 +30,11 @@
         <td class="center"><%= subject.visible ? 'Yes' : 'No' %></td>
         <td class="center"><%= subject.pages.size %></td>
         <td class="actions">
-          <%= link_to("Show", "#", :class => 'action show') %>
-          <%= link_to("Edit", "#", :class => 'action edit') %>
-          <%= link_to("Delete", "#", :class => 'action delete') %>
+
+          <%= link_to("Show", subject_path(subject), :class => 'action show') %>
+          <%= link_to("Edit", edit_subject_path(subject), :class => 'action edit') %>
+          <%= link_to("Delete", delete_subject_path(subject), :class => 'action delete') %>
         </td>
-        <th>Pages</th>
-        <th>Actions</th>
       </tr>
     <% end %>
   </table>

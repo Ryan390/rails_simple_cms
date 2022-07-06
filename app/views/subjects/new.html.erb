@@ -1,11 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <h1>Hello World!</h1>
-</head>
-<body>
+<%= link_to("<< Back to List", subjects_path, :class => 'back-link') %>
 
-</body>
-</html>
+<div class="subjects new">
+  <h2>Create Subject</h2>
+
+  <%= form_for(@subject) do |f| %>
+
+    <table summary="Subject form fields">
+      <tr>
+        <th>Name</th>
+        <td><%= f.text_field(:name) %></td>
+      </tr>
+      <tr>
+        <th>Position</th>
+        <td><%= f.text_field(:position) %></td>
+      </tr>
+      <tr>
+        <th>Visible</th>
+        <td><%= f.text_field(:visible) %></td>
+      </tr>
+    </table>
+
+    <div class="form-buttons">
+      <%= f.submit("Create Subject") %>
+    </div>
+
+  <% end %>
+</div>

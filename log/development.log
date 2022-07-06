@@ -2476,3 +2476,1799 @@ Processing by SubjectsController#index as HTML
 Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 1.1ms | Allocations: 9748)
 
 
+Started GET "/" for 127.0.0.1 at 2022-07-06 08:20:02 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ryanrobinson/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ryanrobinson/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.6ms | Allocations: 537)
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 3696)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 08:20:06 +0100
+Processing by SubjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (5.5ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:19
+  [1m[36mPage Count (8.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:24
+  Rendered subjects/index.html.erb within layouts/application (Duration: 80.9ms | Allocations: 14371)
+  Rendered layout layouts/application.html.erb (Duration: 118.8ms | Allocations: 49498)
+Completed 200 OK in 128ms (Views: 85.6ms | ActiveRecord: 35.3ms | Allocations: 52733)
+
+
+Started GET "/subjects/1" for 127.0.0.1 at 2022-07-06 08:26:40 +0100
+Processing by SubjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/show.html.erb within layouts/application
+  Rendered subjects/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 514)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 14496)
+Completed 200 OK in 12ms (Views: 7.6ms | ActiveRecord: 0.8ms | Allocations: 19773)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 08:26:42 +0100
+Processing by SubjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (5.2ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:19
+  [1m[36mPage Count (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:24
+  Rendered subjects/index.html.erb within layouts/application (Duration: 21.3ms | Allocations: 7297)
+  Rendered layout layouts/application.html.erb (Duration: 24.4ms | Allocations: 9828)
+Completed 200 OK in 27ms (Views: 16.6ms | ActiveRecord: 8.3ms | Allocations: 10267)
+
+
+Started GET "/subjects/2" for 127.0.0.1 at 2022-07-06 08:26:43 +0100
+Processing by SubjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/show.html.erb within layouts/application
+  Rendered subjects/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 114)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 2450)
+Completed 200 OK in 13ms (Views: 7.9ms | ActiveRecord: 0.9ms | Allocations: 3301)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 08:26:43 +0100
+Processing by SubjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:19
+  [1m[36mPage Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:24
+  Rendered subjects/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 3173)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 5550)
+Completed 200 OK in 17ms (Views: 13.8ms | ActiveRecord: 1.8ms | Allocations: 5861)
+
+
+Started GET "/subjects/3" for 127.0.0.1 at 2022-07-06 08:26:44 +0100
+Processing by SubjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/show.html.erb within layouts/application
+  Rendered subjects/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 90)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 2445)
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 0.4ms | Allocations: 3226)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 08:26:44 +0100
+Processing by SubjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:19
+  [1m[36mPage Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:24
+  Rendered subjects/index.html.erb within layouts/application (Duration: 9.3ms | Allocations: 3169)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 5529)
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 1.7ms | Allocations: 5827)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 08:49:34 +0100
+Processing by SubjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:19
+  [1m[36mPage Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:24
+  Rendered subjects/index.html.erb within layouts/application (Duration: 25.9ms | Allocations: 8558)
+  Rendered layout layouts/application.html.erb (Duration: 32.4ms | Allocations: 22585)
+Completed 200 OK in 40ms (Views: 32.4ms | ActiveRecord: 1.8ms | Allocations: 25124)
+
+
+Started GET "/subjects/new" for 127.0.0.1 at 2022-07-06 08:49:37 +0100
+Processing by SubjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/new.html.erb within layouts/application
+  Rendered subjects/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1448)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3781)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 4240)
+
+
+Started POST "/subjects" for 127.0.0.1 at 2022-07-06 08:49:48 +0100
+Processing by SubjectsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "subject"=>{"name"=>"Fourth Subject", "position"=>"4", "visible"=>"true"}, "commit"=>"Create Subject"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 861)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/subjects_controller.rb:16:in `create'
+Started GET "/subjects/new" for 127.0.0.1 at 2022-07-06 09:03:21 +0100
+Processing by SubjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/new.html.erb within layouts/application
+  Rendered subjects/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 954)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 14504)
+Completed 200 OK in 12ms (Views: 8.2ms | ActiveRecord: 0.2ms | Allocations: 17850)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 09:03:23 +0100
+Processing by SubjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:19
+  [1m[36mPage Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:24
+  Rendered subjects/index.html.erb within layouts/application (Duration: 22.6ms | Allocations: 7040)
+  Rendered layout layouts/application.html.erb (Duration: 26.0ms | Allocations: 9593)
+Completed 200 OK in 28ms (Views: 24.9ms | ActiveRecord: 1.6ms | Allocations: 10033)
+
+
+Started GET "/subjects/new" for 127.0.0.1 at 2022-07-06 09:03:25 +0100
+Processing by SubjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/new.html.erb within layouts/application
+  Rendered subjects/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 731)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 2937)
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 3264)
+
+
+Started POST "/subjects" for 127.0.0.1 at 2022-07-06 09:03:33 +0100
+Processing by SubjectsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "subject"=>{"name"=>"Fourth Subject", "position"=>"4", "visible"=>"true"}, "commit"=>"Create Subject"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/subjects_controller.rb:18:in `create'
+  [1m[36mSubject Create (1.5ms)[0m  [1m[32mINSERT INTO `subjects` (`name`, `position`, `visible`, `created_at`, `updated_at`) VALUES ('Fourth Subject', 4, TRUE, '2022-07-06 08:03:33.722773', '2022-07-06 08:03:33.722773')[0m
+  ↳ app/controllers/subjects_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/subjects_controller.rb:18:in `create'
+Redirected to http://127.0.0.1:3000/subjects
+Completed 302 Found in 11ms (ActiveRecord: 3.0ms | Allocations: 3474)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 09:03:33 +0100
+Processing by SubjectsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.8ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:19
+  [1m[36mPage Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:24
+  Rendered subjects/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 4027)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 6387)
+Completed 200 OK in 14ms (Views: 10.0ms | ActiveRecord: 3.1ms | Allocations: 6746)
+
+
+Started GET "/subjects/4" for 127.0.0.1 at 2022-07-06 09:03:37 +0100
+Processing by SubjectsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSubject Load (1.0ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/show.html.erb within layouts/application
+  Rendered subjects/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 340)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 2701)
+Completed 200 OK in 12ms (Views: 6.4ms | ActiveRecord: 1.0ms | Allocations: 4156)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 09:03:39 +0100
+Processing by SubjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.8ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:19
+  [1m[36mPage Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:24
+  Rendered subjects/index.html.erb within layouts/application (Duration: 11.0ms | Allocations: 4017)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 6377)
+Completed 200 OK in 20ms (Views: 15.9ms | ActiveRecord: 2.2ms | Allocations: 6676)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 09:27:11 +0100
+Processing by SubjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:19
+  [1m[36mPage Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:24
+  Rendered subjects/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 9504)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 23543)
+Completed 200 OK in 23ms (Views: 15.3ms | ActiveRecord: 3.1ms | Allocations: 26090)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 09:27:11 +0100
+Processing by SubjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (2.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:19
+  [1m[36mPage Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:24
+  Rendered subjects/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 4069)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 6420)
+Completed 200 OK in 13ms (Views: 8.0ms | ActiveRecord: 3.8ms | Allocations: 6768)
+
+
+Started GET "/subjects/1/edit" for 127.0.0.1 at 2022-07-06 09:27:13 +0100
+Processing by SubjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/edit.html.erb within layouts/application
+  Rendered subjects/edit.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1132)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3329)
+Completed 200 OK in 10ms (Views: 6.2ms | ActiveRecord: 0.4ms | Allocations: 4789)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 09:27:16 +0100
+Processing by SubjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:19
+  [1m[36mPage Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:24
+  Rendered subjects/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 4061)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 6412)
+Completed 200 OK in 15ms (Views: 12.5ms | ActiveRecord: 1.7ms | Allocations: 6710)
+
+
+Started GET "/subjects/2/edit" for 127.0.0.1 at 2022-07-06 09:27:17 +0100
+Processing by SubjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/edit.html.erb within layouts/application
+  Rendered subjects/edit.html.erb within layouts/application (Duration: 1.3ms | Allocations: 777)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2974)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.4ms | Allocations: 3755)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 09:27:18 +0100
+Processing by SubjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (1.4ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:19
+  [1m[36mPage Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:24
+  Rendered subjects/index.html.erb within layouts/application (Duration: 15.5ms | Allocations: 4061)
+  Rendered layout layouts/application.html.erb (Duration: 21.6ms | Allocations: 6403)
+Completed 200 OK in 24ms (Views: 18.9ms | ActiveRecord: 3.6ms | Allocations: 6701)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 09:32:48 +0100
+Processing by SubjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (3.7ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:19
+  [1m[36mPage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:24
+  Rendered subjects/index.html.erb within layouts/application (Duration: 20.1ms | Allocations: 9894)
+  Rendered layout layouts/application.html.erb (Duration: 25.2ms | Allocations: 23667)
+Completed 200 OK in 27ms (Views: 13.2ms | ActiveRecord: 12.4ms | Allocations: 25691)
+
+
+Started GET "/subjects/4/edit" for 127.0.0.1 at 2022-07-06 09:32:49 +0100
+Processing by SubjectsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:26:in `edit'
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.4ms | Allocations: 1582)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: subject):
+  
+app/controllers/subjects_controller.rb:49:in `subject_params'
+app/controllers/subjects_controller.rb:28:in `edit'
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 09:33:07 +0100
+Processing by SubjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (1.5ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:19
+  [1m[36mPage Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:24
+  Rendered subjects/index.html.erb within layouts/application (Duration: 15.6ms | Allocations: 4063)
+  Rendered layout layouts/application.html.erb (Duration: 26.1ms | Allocations: 6441)
+Completed 200 OK in 29ms (Views: 23.4ms | ActiveRecord: 3.6ms | Allocations: 6767)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 09:33:09 +0100
+Processing by SubjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:19
+  [1m[36mPage Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:24
+  Rendered subjects/index.html.erb within layouts/application (Duration: 16.1ms | Allocations: 4061)
+  Rendered layout layouts/application.html.erb (Duration: 43.7ms | Allocations: 6421)
+Completed 200 OK in 47ms (Views: 41.8ms | ActiveRecord: 3.0ms | Allocations: 6716)
+
+
+Started GET "/subjects/3/edit" for 127.0.0.1 at 2022-07-06 09:33:12 +0100
+Processing by SubjectsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:26:in `edit'
+Completed 400 Bad Request in 5ms (ActiveRecord: 0.9ms | Allocations: 979)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: subject):
+  
+app/controllers/subjects_controller.rb:49:in `subject_params'
+app/controllers/subjects_controller.rb:28:in `edit'
+Started GET "/subjects/3/edit" for 127.0.0.1 at 2022-07-06 09:35:33 +0100
+Processing by SubjectsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/edit.html.erb within layouts/application
+  Rendered subjects/edit.html.erb within layouts/application (Duration: 2.1ms | Allocations: 5807)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 5901)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 7.1ms | Allocations: 10981)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<ActionView::Base:0x00000000024798>
+
+      '.freeze;@output_buffer.append=( f.submit("Update Subject") );@output_buffer.safe_append='
+                                       ^):
+    21:     </table>
+    22: 
+    23:     <div class="form-buttons">
+    24:       <%= f.submit("Update Subject") %>
+    25:     </div>
+    26: 
+    27:   <% end %>
+  
+app/views/subjects/edit.html.erb:24
+app/views/subjects/edit.html.erb:6
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 09:35:38 +0100
+Processing by SubjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:19
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:24
+  Rendered subjects/index.html.erb within layouts/application (Duration: 15.7ms | Allocations: 8513)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 22508)
+Completed 200 OK in 25ms (Views: 20.5ms | ActiveRecord: 3.0ms | Allocations: 22939)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 09:35:39 +0100
+Processing by SubjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (1.4ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:19
+  [1m[36mPage Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:24
+  Rendered subjects/index.html.erb within layouts/application (Duration: 17.3ms | Allocations: 4069)
+  Rendered layout layouts/application.html.erb (Duration: 25.3ms | Allocations: 6430)
+Completed 200 OK in 35ms (Views: 22.8ms | ActiveRecord: 3.6ms | Allocations: 6778)
+
+
+Started GET "/subjects/1" for 127.0.0.1 at 2022-07-06 09:35:41 +0100
+Processing by SubjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSubject Load (1.0ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/show.html.erb within layouts/application
+  Rendered subjects/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 332)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 2690)
+Completed 200 OK in 16ms (Views: 10.7ms | ActiveRecord: 1.0ms | Allocations: 3556)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 09:35:42 +0100
+Processing by SubjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (2.0ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:19
+  [1m[36mPage Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:24
+  Rendered subjects/index.html.erb within layouts/application (Duration: 13.9ms | Allocations: 4061)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 6430)
+Completed 200 OK in 24ms (Views: 18.4ms | ActiveRecord: 3.6ms | Allocations: 6728)
+
+
+Started GET "/subjects/1/edit" for 127.0.0.1 at 2022-07-06 09:35:44 +0100
+Processing by SubjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/edit.html.erb within layouts/application
+  Rendered subjects/edit.html.erb within layouts/application (Duration: 7.0ms | Allocations: 5416)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 5504)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.5ms | Allocations: 6262)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<ActionView::Base:0x00000000024ba8>
+
+      '.freeze;@output_buffer.append=( f.submit("Update Subject") );@output_buffer.safe_append='
+                                       ^):
+    21:     </table>
+    22: 
+    23:     <div class="form-buttons">
+    24:       <%= f.submit("Update Subject") %>
+    25:     </div>
+    26: 
+    27:   <% end %>
+  
+app/views/subjects/edit.html.erb:24
+app/views/subjects/edit.html.erb:6
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 09:36:17 +0100
+Processing by SubjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:19
+  [1m[36mPage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:24
+  Rendered subjects/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 4628)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 7450)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 1.3ms | Allocations: 8293)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 09:36:18 +0100
+Processing by SubjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (1.3ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:19
+  [1m[36mPage Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:24
+  Rendered subjects/index.html.erb within layouts/application (Duration: 12.2ms | Allocations: 4061)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 6436)
+Completed 200 OK in 23ms (Views: 17.6ms | ActiveRecord: 3.0ms | Allocations: 6764)
+
+
+Started GET "/subjects/1/edit" for 127.0.0.1 at 2022-07-06 09:36:19 +0100
+Processing by SubjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/edit.html.erb within layouts/application
+  Rendered subjects/edit.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1108)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 3305)
+Completed 200 OK in 12ms (Views: 8.3ms | ActiveRecord: 0.9ms | Allocations: 4151)
+
+
+Started GET "/subjects/4/edit" for 127.0.0.1 at 2022-07-06 09:36:22 +0100
+Processing by SubjectsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/edit.html.erb within layouts/application
+  Rendered subjects/edit.html.erb within layouts/application (Duration: 1.3ms | Allocations: 780)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 2977)
+Completed 200 OK in 8ms (Views: 5.5ms | ActiveRecord: 0.7ms | Allocations: 3757)
+
+
+Started PATCH "/subjects/4" for 127.0.0.1 at 2022-07-06 09:36:25 +0100
+Processing by SubjectsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "subject"=>{"name"=>"Fourth Subject", "position"=>"5", "visible"=>"true"}, "commit"=>"Update Subject", "id"=>"4"}
+  [1m[36mSubject Load (2.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:30:in `update'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/subjects_controller.rb:32:in `update'
+  [1m[36mSubject Update (1.6ms)[0m  [1m[33mUPDATE `subjects` SET `subjects`.`position` = 5, `subjects`.`updated_at` = '2022-07-06 08:36:25.714966' WHERE `subjects`.`id` = 4[0m
+  ↳ app/controllers/subjects_controller.rb:32:in `update'
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/subjects_controller.rb:32:in `update'
+Redirected to http://127.0.0.1:3000/subjects
+Completed 302 Found in 19ms (ActiveRecord: 8.3ms | Allocations: 3324)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 09:36:25 +0100
+Processing by SubjectsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:19
+  [1m[36mPage Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:24
+  Rendered subjects/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 4061)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 6439)
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 2.2ms | Allocations: 6784)
+
+
+Started GET "/subjects/4/edit" for 127.0.0.1 at 2022-07-06 09:36:27 +0100
+Processing by SubjectsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/edit.html.erb within layouts/application
+  Rendered subjects/edit.html.erb within layouts/application (Duration: 1.7ms | Allocations: 810)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3007)
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 0.4ms | Allocations: 3787)
+
+
+Started PATCH "/subjects/4" for 127.0.0.1 at 2022-07-06 09:36:31 +0100
+Processing by SubjectsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "subject"=>{"name"=>"Fourth Subject", "position"=>"4", "visible"=>"true"}, "commit"=>"Update Subject", "id"=>"4"}
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:30:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/subjects_controller.rb:32:in `update'
+  [1m[36mSubject Update (4.0ms)[0m  [1m[33mUPDATE `subjects` SET `subjects`.`position` = 4, `subjects`.`updated_at` = '2022-07-06 08:36:31.310136' WHERE `subjects`.`id` = 4[0m
+  ↳ app/controllers/subjects_controller.rb:32:in `update'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/subjects_controller.rb:32:in `update'
+Redirected to http://127.0.0.1:3000/subjects
+Completed 302 Found in 19ms (ActiveRecord: 6.3ms | Allocations: 2845)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 09:36:31 +0100
+Processing by SubjectsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (1.1ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:19
+  [1m[36mPage Count (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (2.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:24
+  Rendered subjects/index.html.erb within layouts/application (Duration: 12.7ms | Allocations: 4061)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 6412)
+Completed 200 OK in 20ms (Views: 11.9ms | ActiveRecord: 5.6ms | Allocations: 6713)
+
+
+Started GET "/subjects/4/edit" for 127.0.0.1 at 2022-07-06 09:36:32 +0100
+Processing by SubjectsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/edit.html.erb within layouts/application
+  Rendered subjects/edit.html.erb within layouts/application (Duration: 3.0ms | Allocations: 786)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 2983)
+Completed 200 OK in 13ms (Views: 9.3ms | ActiveRecord: 0.7ms | Allocations: 3763)
+
+
+Started PATCH "/subjects/4" for 127.0.0.1 at 2022-07-06 09:36:40 +0100
+Processing by SubjectsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "subject"=>{"name"=>"Ninth Subject", "position"=>"9", "visible"=>"true"}, "commit"=>"Update Subject", "id"=>"4"}
+  [1m[36mSubject Load (0.8ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:30:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/subjects_controller.rb:32:in `update'
+  [1m[36mSubject Update (0.8ms)[0m  [1m[33mUPDATE `subjects` SET `subjects`.`name` = 'Ninth Subject', `subjects`.`position` = 9, `subjects`.`updated_at` = '2022-07-06 08:36:40.908778' WHERE `subjects`.`id` = 4[0m
+  ↳ app/controllers/subjects_controller.rb:32:in `update'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/subjects_controller.rb:32:in `update'
+Redirected to http://127.0.0.1:3000/subjects
+Completed 302 Found in 13ms (ActiveRecord: 2.7ms | Allocations: 2851)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 09:36:40 +0100
+Processing by SubjectsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (1.1ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:19
+  [1m[36mPage Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:24
+  Rendered subjects/index.html.erb within layouts/application (Duration: 10.8ms | Allocations: 4061)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 6427)
+Completed 200 OK in 17ms (Views: 11.1ms | ActiveRecord: 4.0ms | Allocations: 6729)
+
+
+Started GET "/subjects/4/edit" for 127.0.0.1 at 2022-07-06 09:36:42 +0100
+Processing by SubjectsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSubject Load (1.2ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/edit.html.erb within layouts/application
+  Rendered subjects/edit.html.erb within layouts/application (Duration: 2.3ms | Allocations: 783)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 2995)
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 1.2ms | Allocations: 3776)
+
+
+Started PATCH "/subjects/4" for 127.0.0.1 at 2022-07-06 09:36:47 +0100
+Processing by SubjectsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "subject"=>{"name"=>"Fourth Subject", "position"=>"4", "visible"=>"true"}, "commit"=>"Update Subject", "id"=>"4"}
+  [1m[36mSubject Load (1.2ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:30:in `update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/subjects_controller.rb:32:in `update'
+  [1m[36mSubject Update (1.6ms)[0m  [1m[33mUPDATE `subjects` SET `subjects`.`name` = 'Fourth Subject', `subjects`.`position` = 4, `subjects`.`updated_at` = '2022-07-06 08:36:47.807615' WHERE `subjects`.`id` = 4[0m
+  ↳ app/controllers/subjects_controller.rb:32:in `update'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/subjects_controller.rb:32:in `update'
+Redirected to http://127.0.0.1:3000/subjects
+Completed 302 Found in 16ms (ActiveRecord: 4.2ms | Allocations: 2869)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 09:36:47 +0100
+Processing by SubjectsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.8ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:19
+  [1m[36mPage Count (2.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:24
+  Rendered subjects/index.html.erb within layouts/application (Duration: 10.8ms | Allocations: 4062)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 6431)
+Completed 200 OK in 16ms (Views: 11.4ms | ActiveRecord: 4.0ms | Allocations: 6732)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 09:42:15 +0100
+Processing by SubjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (1.0ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:19
+  [1m[36mPage Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:24
+  Rendered subjects/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 4671)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 7477)
+Completed 200 OK in 21ms (Views: 14.5ms | ActiveRecord: 3.3ms | Allocations: 8474)
+
+
+Started GET "/subjects/4/delete" for 127.0.0.1 at 2022-07-06 09:42:16 +0100
+Processing by SubjectsController#delete as HTML
+  Parameters: {"id"=>"4"}
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/delete.html.erb within layouts/application
+  Rendered subjects/delete.html.erb within layouts/application (Duration: 0.8ms | Allocations: 128)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2492)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 2834)
+
+
+Started GET "/subjects/3/delete" for 127.0.0.1 at 2022-07-06 09:42:18 +0100
+Processing by SubjectsController#delete as HTML
+  Parameters: {"id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/delete.html.erb within layouts/application
+  Rendered subjects/delete.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 2379)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 2648)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 09:49:22 +0100
+Processing by SubjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:19
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:24
+  Rendered subjects/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 9593)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 23612)
+Completed 200 OK in 22ms (Views: 16.3ms | ActiveRecord: 2.0ms | Allocations: 26157)
+
+
+Started GET "/subjects/4/delete" for 127.0.0.1 at 2022-07-06 09:49:24 +0100
+Processing by SubjectsController#delete as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSubject Load (1.0ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:40:in `delete'
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/delete.html.erb within layouts/application
+  Rendered subjects/delete.html.erb within layouts/application (Duration: 2.6ms | Allocations: 850)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3050)
+Completed 200 OK in 12ms (Views: 6.4ms | ActiveRecord: 1.0ms | Allocations: 4554)
+
+
+Started DELETE "/subjects/4" for 127.0.0.1 at 2022-07-06 09:49:26 +0100
+Processing by SubjectsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Delete Subject", "id"=>"4"}
+  [1m[36mSubject Load (1.0ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:44:in `destroy'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/subjects_controller.rb:45:in `destroy'
+  [1m[36mSubject Destroy (0.7ms)[0m  [1m[31mDELETE FROM `subjects` WHERE `subjects`.`id` = 4[0m
+  ↳ app/controllers/subjects_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/subjects_controller.rb:45:in `destroy'
+Redirected to http://127.0.0.1:3000/subjects
+Completed 302 Found in 15ms (ActiveRecord: 3.5ms | Allocations: 2606)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 09:49:26 +0100
+Processing by SubjectsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (1.2ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:19
+  [1m[36mPage Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:24
+  Rendered subjects/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 3245)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 5623)
+Completed 200 OK in 14ms (Views: 10.3ms | ActiveRecord: 2.4ms | Allocations: 5981)
+
+
+Started GET "/subjects/new" for 127.0.0.1 at 2022-07-06 09:49:28 +0100
+Processing by SubjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/new.html.erb within layouts/application
+  Rendered subjects/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 958)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3163)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 3513)
+
+
+Started POST "/subjects" for 127.0.0.1 at 2022-07-06 09:49:32 +0100
+Processing by SubjectsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "subject"=>{"name"=>"Fourth Subject", "position"=>"4", "visible"=>"false"}, "commit"=>"Create Subject"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/subjects_controller.rb:18:in `create'
+  [1m[36mSubject Create (1.0ms)[0m  [1m[32mINSERT INTO `subjects` (`name`, `position`, `visible`, `created_at`, `updated_at`) VALUES ('Fourth Subject', 4, FALSE, '2022-07-06 08:49:32.262597', '2022-07-06 08:49:32.262597')[0m
+  ↳ app/controllers/subjects_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/subjects_controller.rb:18:in `create'
+Redirected to http://127.0.0.1:3000/subjects
+Completed 302 Found in 9ms (ActiveRecord: 2.3ms | Allocations: 2471)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 09:49:32 +0100
+Processing by SubjectsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (1.0ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:19
+  [1m[36mPage Count (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:24
+  [1m[36mPage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5[0m
+  ↳ app/views/subjects/index.html.erb:24
+  Rendered subjects/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 4105)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 6498)
+Completed 200 OK in 16ms (Views: 10.7ms | ActiveRecord: 4.7ms | Allocations: 6799)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 10:02:31 +0100
+Processing by SubjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5[0m
+  ↳ app/views/subjects/index.html.erb:30
+  Rendered subjects/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 9890)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 23683)
+Completed 200 OK in 16ms (Views: 12.1ms | ActiveRecord: 1.3ms | Allocations: 26228)
+
+
+Started GET "/subjects/new" for 127.0.0.1 at 2022-07-06 10:02:33 +0100
+Processing by SubjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/new.html.erb within layouts/application
+  Rendered subjects/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1087)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3293)
+Completed 200 OK in 8ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 3706)
+
+
+Started POST "/subjects" for 127.0.0.1 at 2022-07-06 10:02:42 +0100
+Processing by SubjectsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "subject"=>{"name"=>"Fifth Subject", "position"=>"5", "visible"=>"true"}, "commit"=>"Create Subject"}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/subjects_controller.rb:18:in `create'
+  [1m[36mSubject Create (1.1ms)[0m  [1m[32mINSERT INTO `subjects` (`name`, `position`, `visible`, `created_at`, `updated_at`) VALUES ('Fifth Subject', 5, TRUE, '2022-07-06 09:02:42.354062', '2022-07-06 09:02:42.354062')[0m
+  ↳ app/controllers/subjects_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/subjects_controller.rb:18:in `create'
+Redirected to http://127.0.0.1:3000/subjects
+Completed 302 Found in 14ms (ActiveRecord: 3.8ms | Allocations: 2569)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 10:02:42 +0100
+Processing by SubjectsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (1.1ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 6[0m
+  ↳ app/views/subjects/index.html.erb:30
+  Rendered subjects/index.html.erb within layouts/application (Duration: 44.9ms | Allocations: 5167)
+  Rendered layout layouts/application.html.erb (Duration: 72.2ms | Allocations: 7372)
+Completed 200 OK in 74ms (Views: 68.0ms | ActiveRecord: 4.6ms | Allocations: 7730)
+
+
+Started GET "/subjects/new" for 127.0.0.1 at 2022-07-06 10:04:47 +0100
+Processing by SubjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/new.html.erb within layouts/application
+  Rendered subjects/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 695)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 2911)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 3196)
+
+
+Started POST "/subjects" for 127.0.0.1 at 2022-07-06 10:04:54 +0100
+Processing by SubjectsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "subject"=>{"name"=>"test flash", "position"=>"6", "visible"=>"false"}, "commit"=>"Create Subject"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/subjects_controller.rb:18:in `create'
+  [1m[36mSubject Create (0.9ms)[0m  [1m[32mINSERT INTO `subjects` (`name`, `position`, `visible`, `created_at`, `updated_at`) VALUES ('test flash', 6, FALSE, '2022-07-06 09:04:54.037785', '2022-07-06 09:04:54.037785')[0m
+  ↳ app/controllers/subjects_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/subjects_controller.rb:18:in `create'
+Redirected to http://127.0.0.1:3000/subjects
+Completed 302 Found in 9ms (ActiveRecord: 2.5ms | Allocations: 2284)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 10:04:54 +0100
+Processing by SubjectsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (1.0ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 6[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 7[0m
+  ↳ app/views/subjects/index.html.erb:30
+  Rendered subjects/index.html.erb within layouts/application (Duration: 12.0ms | Allocations: 6025)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 8230)
+Completed 200 OK in 17ms (Views: 12.9ms | ActiveRecord: 3.3ms | Allocations: 8531)
+
+
+Started GET "/subjects/7/delete" for 127.0.0.1 at 2022-07-06 10:04:56 +0100
+Processing by SubjectsController#delete as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mSubject Load (1.0ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:42:in `delete'
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/delete.html.erb within layouts/application
+  Rendered subjects/delete.html.erb within layouts/application (Duration: 4.4ms | Allocations: 772)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 2969)
+Completed 200 OK in 16ms (Views: 8.9ms | ActiveRecord: 1.0ms | Allocations: 4402)
+
+
+Started DELETE "/subjects/7" for 127.0.0.1 at 2022-07-06 10:04:57 +0100
+Processing by SubjectsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Delete Subject", "id"=>"7"}
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:46:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/subjects_controller.rb:47:in `destroy'
+  [1m[36mSubject Destroy (0.4ms)[0m  [1m[31mDELETE FROM `subjects` WHERE `subjects`.`id` = 7[0m
+  ↳ app/controllers/subjects_controller.rb:47:in `destroy'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/subjects_controller.rb:47:in `destroy'
+Redirected to http://127.0.0.1:3000/subjects
+Completed 302 Found in 7ms (ActiveRecord: 1.3ms | Allocations: 2503)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 10:04:57 +0100
+Processing by SubjectsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 6[0m
+  ↳ app/views/subjects/index.html.erb:30
+  Rendered subjects/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 5157)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 7371)
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 1.6ms | Allocations: 7672)
+
+
+Started GET "/subjects/6/delete" for 127.0.0.1 at 2022-07-06 10:04:58 +0100
+Processing by SubjectsController#delete as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:42:in `delete'
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/delete.html.erb within layouts/application
+  Rendered subjects/delete.html.erb within layouts/application (Duration: 0.5ms | Allocations: 550)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 2747)
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.4ms | Allocations: 3527)
+
+
+Started DELETE "/subjects/6" for 127.0.0.1 at 2022-07-06 10:04:59 +0100
+Processing by SubjectsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Delete Subject", "id"=>"6"}
+  [1m[36mSubject Load (0.8ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:46:in `destroy'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/subjects_controller.rb:47:in `destroy'
+  [1m[36mSubject Destroy (0.5ms)[0m  [1m[31mDELETE FROM `subjects` WHERE `subjects`.`id` = 6[0m
+  ↳ app/controllers/subjects_controller.rb:47:in `destroy'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/subjects_controller.rb:47:in `destroy'
+Redirected to http://127.0.0.1:3000/subjects
+Completed 302 Found in 10ms (ActiveRecord: 2.8ms | Allocations: 2457)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 10:04:59 +0100
+Processing by SubjectsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.8ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5[0m
+  ↳ app/views/subjects/index.html.erb:30
+  Rendered subjects/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 4301)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 6512)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 2.2ms | Allocations: 6813)
+
+
+Started GET "/subjects/new" for 127.0.0.1 at 2022-07-06 10:05:09 +0100
+Processing by SubjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/new.html.erb within layouts/application
+  Rendered subjects/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 689)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2894)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 3178)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 10:05:11 +0100
+Processing by SubjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (1.0ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5[0m
+  ↳ app/views/subjects/index.html.erb:30
+  Rendered subjects/index.html.erb within layouts/application (Duration: 13.7ms | Allocations: 4276)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 6481)
+Completed 200 OK in 23ms (Views: 18.3ms | ActiveRecord: 2.7ms | Allocations: 6779)
+
+
+Started GET "/subjects/5/edit" for 127.0.0.1 at 2022-07-06 10:05:23 +0100
+Processing by SubjectsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/edit.html.erb within layouts/application
+  Rendered subjects/edit.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1036)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3248)
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 0.7ms | Allocations: 4084)
+
+
+Started PATCH "/subjects/5" for 127.0.0.1 at 2022-07-06 10:05:26 +0100
+Processing by SubjectsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "subject"=>{"name"=>"Fourth Subject", "position"=>"5", "visible"=>"false"}, "commit"=>"Update Subject", "id"=>"5"}
+  [1m[36mSubject Load (1.0ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:31:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/subjects_controller.rb:33:in `update'
+  [1m[36mSubject Update (1.0ms)[0m  [1m[33mUPDATE `subjects` SET `subjects`.`position` = 5, `subjects`.`updated_at` = '2022-07-06 09:05:26.802795' WHERE `subjects`.`id` = 5[0m
+  ↳ app/controllers/subjects_controller.rb:33:in `update'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/subjects_controller.rb:33:in `update'
+Redirected to http://127.0.0.1:3000/subjects
+Completed 302 Found in 15ms (ActiveRecord: 3.4ms | Allocations: 2941)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 10:05:26 +0100
+Processing by SubjectsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5[0m
+  ↳ app/views/subjects/index.html.erb:30
+  Rendered subjects/index.html.erb within layouts/application (Duration: 9.6ms | Allocations: 4298)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 6514)
+Completed 200 OK in 17ms (Views: 11.7ms | ActiveRecord: 2.1ms | Allocations: 6816)
+
+
+Started GET "/subjects/5/edit" for 127.0.0.1 at 2022-07-06 10:05:36 +0100
+Processing by SubjectsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/edit.html.erb within layouts/application
+  Rendered subjects/edit.html.erb within layouts/application (Duration: 3.1ms | Allocations: 777)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 2974)
+Completed 200 OK in 13ms (Views: 9.0ms | ActiveRecord: 0.7ms | Allocations: 3754)
+
+
+Started PATCH "/subjects/5" for 127.0.0.1 at 2022-07-06 10:05:40 +0100
+Processing by SubjectsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "subject"=>{"name"=>"Fourth Subject", "position"=>"4", "visible"=>"false"}, "commit"=>"Update Subject", "id"=>"5"}
+  [1m[36mSubject Load (1.0ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:31:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/subjects_controller.rb:33:in `update'
+  [1m[36mSubject Update (0.9ms)[0m  [1m[33mUPDATE `subjects` SET `subjects`.`position` = 4, `subjects`.`updated_at` = '2022-07-06 09:05:40.855883' WHERE `subjects`.`id` = 5[0m
+  ↳ app/controllers/subjects_controller.rb:33:in `update'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/subjects_controller.rb:33:in `update'
+Redirected to http://127.0.0.1:3000/subjects
+Completed 302 Found in 14ms (ActiveRecord: 3.2ms | Allocations: 2873)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 10:05:40 +0100
+Processing by SubjectsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (1.1ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5[0m
+  ↳ app/views/subjects/index.html.erb:30
+  Rendered subjects/index.html.erb within layouts/application (Duration: 10.4ms | Allocations: 4283)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 6488)
+Completed 200 OK in 16ms (Views: 12.3ms | ActiveRecord: 2.5ms | Allocations: 6789)
+
+
+Started GET "/subjects/5/edit" for 127.0.0.1 at 2022-07-06 10:05:48 +0100
+Processing by SubjectsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSubject Load (0.8ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/edit.html.erb within layouts/application
+  Rendered subjects/edit.html.erb within layouts/application (Duration: 2.9ms | Allocations: 765)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 2964)
+Completed 200 OK in 15ms (Views: 9.6ms | ActiveRecord: 0.8ms | Allocations: 3744)
+
+
+Started PATCH "/subjects/5" for 127.0.0.1 at 2022-07-06 10:05:51 +0100
+Processing by SubjectsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "subject"=>{"name"=>"Fourth Subject", "position"=>"2", "visible"=>"false"}, "commit"=>"Update Subject", "id"=>"5"}
+  [1m[36mSubject Load (1.2ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:31:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/subjects_controller.rb:33:in `update'
+  [1m[36mSubject Update (0.9ms)[0m  [1m[33mUPDATE `subjects` SET `subjects`.`position` = 2, `subjects`.`updated_at` = '2022-07-06 09:05:51.550927' WHERE `subjects`.`id` = 5[0m
+  ↳ app/controllers/subjects_controller.rb:33:in `update'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/subjects_controller.rb:33:in `update'
+Redirected to http://127.0.0.1:3000/subjects
+Completed 302 Found in 14ms (ActiveRecord: 3.3ms | Allocations: 2858)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 10:05:51 +0100
+Processing by SubjectsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  Rendered subjects/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 4298)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 6510)
+Completed 200 OK in 14ms (Views: 11.3ms | ActiveRecord: 1.7ms | Allocations: 6812)
+
+
+Started GET "/subjects/5/edit" for 127.0.0.1 at 2022-07-06 10:05:57 +0100
+Processing by SubjectsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/edit.html.erb within layouts/application
+  Rendered subjects/edit.html.erb within layouts/application (Duration: 2.3ms | Allocations: 768)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 2965)
+Completed 200 OK in 14ms (Views: 7.9ms | ActiveRecord: 0.9ms | Allocations: 3745)
+
+
+Started PATCH "/subjects/5" for 127.0.0.1 at 2022-07-06 10:06:01 +0100
+Processing by SubjectsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "subject"=>{"name"=>"Fourth Subject", "position"=>"4", "visible"=>"false"}, "commit"=>"Update Subject", "id"=>"5"}
+  [1m[36mSubject Load (1.0ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:31:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/subjects_controller.rb:33:in `update'
+  [1m[36mSubject Update (0.7ms)[0m  [1m[33mUPDATE `subjects` SET `subjects`.`position` = 4, `subjects`.`updated_at` = '2022-07-06 09:06:01.337494' WHERE `subjects`.`id` = 5[0m
+  ↳ app/controllers/subjects_controller.rb:33:in `update'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/subjects_controller.rb:33:in `update'
+Redirected to http://127.0.0.1:3000/subjects
+Completed 302 Found in 13ms (ActiveRecord: 2.9ms | Allocations: 2873)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 10:06:01 +0100
+Processing by SubjectsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5[0m
+  ↳ app/views/subjects/index.html.erb:30
+  Rendered subjects/index.html.erb within layouts/application (Duration: 9.4ms | Allocations: 4289)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 6500)
+Completed 200 OK in 15ms (Views: 11.7ms | ActiveRecord: 2.3ms | Allocations: 6801)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 10:06:28 +0100
+Processing by SubjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5[0m
+  ↳ app/views/subjects/index.html.erb:30
+  Rendered subjects/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 4941)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 7552)
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 1.1ms | Allocations: 8400)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 10:06:53 +0100
+Processing by SubjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (1.1ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5[0m
+  ↳ app/views/subjects/index.html.erb:30
+  Rendered subjects/index.html.erb within layouts/application (Duration: 20.7ms | Allocations: 4953)
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | Allocations: 7559)
+Completed 200 OK in 40ms (Views: 29.1ms | ActiveRecord: 4.4ms | Allocations: 8439)
+
+
+Started GET "/subjects/new" for 127.0.0.1 at 2022-07-06 10:06:56 +0100
+Processing by SubjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/new.html.erb within layouts/application
+  Rendered subjects/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1009)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3214)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 3576)
+
+
+Started POST "/subjects" for 127.0.0.1 at 2022-07-06 10:06:59 +0100
+Processing by SubjectsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "subject"=>{"name"=>"asdasd", "position"=>"asd", "visible"=>"false"}, "commit"=>"Create Subject"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/subjects_controller.rb:18:in `create'
+  [1m[36mSubject Create (1.1ms)[0m  [1m[32mINSERT INTO `subjects` (`name`, `position`, `visible`, `created_at`, `updated_at`) VALUES ('asdasd', 0, FALSE, '2022-07-06 09:06:59.119544', '2022-07-06 09:06:59.119544')[0m
+  ↳ app/controllers/subjects_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/subjects_controller.rb:18:in `create'
+Redirected to http://127.0.0.1:3000/subjects
+Completed 302 Found in 9ms (ActiveRecord: 2.1ms | Allocations: 2376)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 10:06:59 +0100
+Processing by SubjectsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.8ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 8[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5[0m
+  ↳ app/views/subjects/index.html.erb:30
+  Rendered subjects/index.html.erb within layouts/application (Duration: 9.6ms | Allocations: 5165)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 7370)
+Completed 200 OK in 15ms (Views: 11.2ms | ActiveRecord: 2.5ms | Allocations: 7728)
+
+
+Started GET "/subjects/8/delete" for 127.0.0.1 at 2022-07-06 10:07:02 +0100
+Processing by SubjectsController#delete as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 8 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:42:in `delete'
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/delete.html.erb within layouts/application
+  Rendered subjects/delete.html.erb within layouts/application (Duration: 3.7ms | Allocations: 781)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 2980)
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 0.7ms | Allocations: 3824)
+
+
+Started DELETE "/subjects/8" for 127.0.0.1 at 2022-07-06 10:07:03 +0100
+Processing by SubjectsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Delete Subject", "id"=>"8"}
+  [1m[36mSubject Load (1.1ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 8 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:46:in `destroy'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/subjects_controller.rb:47:in `destroy'
+  [1m[36mSubject Destroy (0.6ms)[0m  [1m[31mDELETE FROM `subjects` WHERE `subjects`.`id` = 8[0m
+  ↳ app/controllers/subjects_controller.rb:47:in `destroy'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/subjects_controller.rb:47:in `destroy'
+Redirected to http://127.0.0.1:3000/subjects
+Completed 302 Found in 12ms (ActiveRecord: 2.8ms | Allocations: 2476)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 10:07:03 +0100
+Processing by SubjectsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (3.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5[0m
+  ↳ app/views/subjects/index.html.erb:30
+  Rendered subjects/index.html.erb within layouts/application (Duration: 11.7ms | Allocations: 4295)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 6507)
+Completed 200 OK in 17ms (Views: 11.3ms | ActiveRecord: 4.9ms | Allocations: 6809)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 10:09:22 +0100
+Processing by SubjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.8ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5[0m
+  ↳ app/views/subjects/index.html.erb:30
+  Rendered subjects/index.html.erb within layouts/application (Duration: 10.4ms | Allocations: 4962)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 7557)
+Completed 200 OK in 18ms (Views: 14.5ms | ActiveRecord: 2.2ms | Allocations: 8402)
+
+
+Started GET "/subjects/new" for 127.0.0.1 at 2022-07-06 10:09:23 +0100
+Processing by SubjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/new.html.erb within layouts/application
+  Rendered subjects/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1012)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3217)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 3579)
+
+
+Started POST "/subjects" for 127.0.0.1 at 2022-07-06 10:09:25 +0100
+Processing by SubjectsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "subject"=>{"name"=>"asd", "position"=>"asd", "visible"=>"false"}, "commit"=>"Create Subject"}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/subjects_controller.rb:18:in `create'
+  [1m[36mSubject Create (1.1ms)[0m  [1m[32mINSERT INTO `subjects` (`name`, `position`, `visible`, `created_at`, `updated_at`) VALUES ('asd', 0, FALSE, '2022-07-06 09:09:25.754535', '2022-07-06 09:09:25.754535')[0m
+  ↳ app/controllers/subjects_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/subjects_controller.rb:18:in `create'
+Redirected to http://127.0.0.1:3000/subjects
+Completed 302 Found in 16ms (ActiveRecord: 2.3ms | Allocations: 2370)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 10:09:25 +0100
+Processing by SubjectsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.8ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 9[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5[0m
+  ↳ app/views/subjects/index.html.erb:30
+  Rendered subjects/index.html.erb within layouts/application (Duration: 9.2ms | Allocations: 5142)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 7362)
+Completed 200 OK in 14ms (Views: 10.7ms | ActiveRecord: 2.4ms | Allocations: 7721)
+
+
+Started GET "/subjects/9/delete" for 127.0.0.1 at 2022-07-06 10:09:29 +0100
+Processing by SubjectsController#delete as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:42:in `delete'
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/delete.html.erb within layouts/application
+  Rendered subjects/delete.html.erb within layouts/application (Duration: 3.6ms | Allocations: 774)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 2975)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 0.9ms | Allocations: 3820)
+
+
+Started DELETE "/subjects/9" for 127.0.0.1 at 2022-07-06 10:09:30 +0100
+Processing by SubjectsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Delete Subject", "id"=>"9"}
+  [1m[36mSubject Load (1.2ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:46:in `destroy'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/subjects_controller.rb:47:in `destroy'
+  [1m[36mSubject Destroy (0.7ms)[0m  [1m[31mDELETE FROM `subjects` WHERE `subjects`.`id` = 9[0m
+  ↳ app/controllers/subjects_controller.rb:47:in `destroy'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/subjects_controller.rb:47:in `destroy'
+Redirected to http://127.0.0.1:3000/subjects
+Completed 302 Found in 13ms (ActiveRecord: 3.8ms | Allocations: 2488)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 10:09:30 +0100
+Processing by SubjectsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (2.1ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5[0m
+  ↳ app/views/subjects/index.html.erb:30
+  Rendered subjects/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 4308)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 6520)
+Completed 200 OK in 16ms (Views: 10.6ms | ActiveRecord: 4.3ms | Allocations: 6821)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 10:16:08 +0100
+Processing by SubjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (1.2ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:26
+  [1m[36mPage Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:31
+  [1m[36mPage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:31
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:31
+  [1m[36mPage Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5[0m
+  ↳ app/views/subjects/index.html.erb:31
+  Rendered subjects/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 4941)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 7536)
+Completed 200 OK in 21ms (Views: 13.8ms | ActiveRecord: 3.1ms | Allocations: 8534)
+
+
+Started GET "/subjects/new" for 127.0.0.1 at 2022-07-06 10:16:10 +0100
+Processing by SubjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/new.html.erb within layouts/application
+  Rendered subjects/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1021)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3228)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 3590)
+
+
+Started POST "/subjects" for 127.0.0.1 at 2022-07-06 10:16:12 +0100
+Processing by SubjectsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "subject"=>{"name"=>"asdasd", "position"=>"asd", "visible"=>"false"}, "commit"=>"Create Subject"}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/subjects_controller.rb:18:in `create'
+  [1m[36mSubject Create (1.5ms)[0m  [1m[32mINSERT INTO `subjects` (`name`, `position`, `visible`, `created_at`, `updated_at`) VALUES ('asdasd', 0, FALSE, '2022-07-06 09:16:12.550827', '2022-07-06 09:16:12.550827')[0m
+  ↳ app/controllers/subjects_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/subjects_controller.rb:18:in `create'
+Redirected to http://127.0.0.1:3000/subjects
+Completed 302 Found in 15ms (ActiveRecord: 2.9ms | Allocations: 2373)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 10:16:12 +0100
+Processing by SubjectsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:26
+  [1m[36mPage Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 10[0m
+  ↳ app/views/subjects/index.html.erb:31
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:31
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:31
+  [1m[36mPage Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:31
+  [1m[36mPage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5[0m
+  ↳ app/views/subjects/index.html.erb:31
+  Rendered subjects/index.html.erb within layouts/application (Duration: 12.0ms | Allocations: 5163)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 7375)
+Completed 200 OK in 18ms (Views: 12.8ms | ActiveRecord: 3.6ms | Allocations: 7734)
+
+
+Started GET "/subjects/10/delete" for 127.0.0.1 at 2022-07-06 10:16:15 +0100
+Processing by SubjectsController#delete as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mSubject Load (1.0ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:42:in `delete'
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/delete.html.erb within layouts/application
+  Rendered subjects/delete.html.erb within layouts/application (Duration: 4.0ms | Allocations: 757)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 2954)
+Completed 200 OK in 12ms (Views: 8.0ms | ActiveRecord: 1.0ms | Allocations: 3798)
+
+
+Started DELETE "/subjects/10" for 127.0.0.1 at 2022-07-06 10:16:16 +0100
+Processing by SubjectsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Delete Subject", "id"=>"10"}
+  [1m[36mSubject Load (1.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:46:in `destroy'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/subjects_controller.rb:47:in `destroy'
+  [1m[36mSubject Destroy (0.7ms)[0m  [1m[31mDELETE FROM `subjects` WHERE `subjects`.`id` = 10[0m
+  ↳ app/controllers/subjects_controller.rb:47:in `destroy'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/subjects_controller.rb:47:in `destroy'
+Redirected to http://127.0.0.1:3000/subjects
+Completed 302 Found in 17ms (ActiveRecord: 4.2ms | Allocations: 2464)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 10:16:16 +0100
+Processing by SubjectsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (2.1ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:26
+  [1m[36mPage Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:31
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:31
+  [1m[36mPage Count (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:31
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5[0m
+  ↳ app/views/subjects/index.html.erb:31
+  Rendered subjects/index.html.erb within layouts/application (Duration: 18.2ms | Allocations: 4305)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 6525)
+Completed 200 OK in 24ms (Views: 17.6ms | ActiveRecord: 5.3ms | Allocations: 6827)
+
+
+Started GET "/subjects/1/edit" for 127.0.0.1 at 2022-07-06 10:18:00 +0100
+Processing by SubjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSubject Load (1.0ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/edit.html.erb within layouts/application
+  Rendered subjects/edit.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1257)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 3842)
+Completed 200 OK in 16ms (Views: 11.4ms | ActiveRecord: 1.0ms | Allocations: 5183)
+
+
+Started PATCH "/subjects/1" for 127.0.0.1 at 2022-07-06 10:18:03 +0100
+Processing by SubjectsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "subject"=>{"name"=>"First Subject 1", "position"=>"1", "visible"=>"true"}, "commit"=>"Update Subject", "id"=>"1"}
+  [1m[36mSubject Load (1.1ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:31:in `update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/subjects_controller.rb:33:in `update'
+  [1m[36mSubject Update (1.3ms)[0m  [1m[33mUPDATE `subjects` SET `subjects`.`name` = 'First Subject 1', `subjects`.`updated_at` = '2022-07-06 09:18:03.536233' WHERE `subjects`.`id` = 1[0m
+  ↳ app/controllers/subjects_controller.rb:33:in `update'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/subjects_controller.rb:33:in `update'
+Redirected to http://127.0.0.1:3000/subjects
+Completed 302 Found in 16ms (ActiveRecord: 3.6ms | Allocations: 3022)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 10:18:03 +0100
+Processing by SubjectsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (1.1ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:26
+  [1m[36mPage Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:31
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:31
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:31
+  [1m[36mPage Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5[0m
+  ↳ app/views/subjects/index.html.erb:31
+  Rendered subjects/index.html.erb within layouts/application (Duration: 11.7ms | Allocations: 4766)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 6975)
+Completed 200 OK in 18ms (Views: 13.4ms | ActiveRecord: 2.7ms | Allocations: 7405)
+
+
+Started GET "/subjects/1/edit" for 127.0.0.1 at 2022-07-06 10:18:05 +0100
+Processing by SubjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/edit.html.erb within layouts/application
+  Rendered subjects/edit.html.erb within layouts/application (Duration: 3.2ms | Allocations: 771)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 2975)
+Completed 200 OK in 15ms (Views: 10.4ms | ActiveRecord: 0.7ms | Allocations: 3756)
+
+
+Started PATCH "/subjects/1" for 127.0.0.1 at 2022-07-06 10:18:08 +0100
+Processing by SubjectsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "subject"=>{"name"=>"First Subject", "position"=>"1", "visible"=>"true"}, "commit"=>"Update Subject", "id"=>"1"}
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:31:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/subjects_controller.rb:33:in `update'
+  [1m[36mSubject Update (0.8ms)[0m  [1m[33mUPDATE `subjects` SET `subjects`.`name` = 'First Subject', `subjects`.`updated_at` = '2022-07-06 09:18:08.499876' WHERE `subjects`.`id` = 1[0m
+  ↳ app/controllers/subjects_controller.rb:33:in `update'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/subjects_controller.rb:33:in `update'
+Redirected to http://127.0.0.1:3000/subjects
+Completed 302 Found in 9ms (ActiveRecord: 2.8ms | Allocations: 2859)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 10:18:08 +0100
+Processing by SubjectsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:26
+  [1m[36mPage Count (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:31
+  [1m[36mPage Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:31
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:31
+  [1m[36mPage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5[0m
+  ↳ app/views/subjects/index.html.erb:31
+  Rendered subjects/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 4296)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 6503)
+Completed 200 OK in 13ms (Views: 8.5ms | ActiveRecord: 3.2ms | Allocations: 6804)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2022-07-06 10:18:10 +0100
+Processing by SubjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (1.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` ORDER BY position ASC[0m
+  ↳ app/views/subjects/index.html.erb:26
+  [1m[36mPage Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  ↳ app/views/subjects/index.html.erb:31
+  [1m[36mPage Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:31
+  [1m[36mPage Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:31
+  [1m[36mPage Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5[0m
+  ↳ app/views/subjects/index.html.erb:31
+  Rendered subjects/index.html.erb within layouts/application (Duration: 16.6ms | Allocations: 4279)
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 6484)
+Completed 200 OK in 26ms (Views: 20.7ms | ActiveRecord: 3.3ms | Allocations: 6779)
+
+
